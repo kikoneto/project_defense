@@ -1,6 +1,6 @@
 .register-box {
     width: 400px;
-    height: 580px;
+    height: 720px;
     margin: auto;
     background-color: lightcoral;
     border-radius: 3px;
@@ -43,7 +43,7 @@
 
 .form-register input[type="submit"] {
     width: 350px;
-    height: 35px;
+    height: 45px;
     margin-top: 25px;
     margin-bottom: 25px;
     border: none;

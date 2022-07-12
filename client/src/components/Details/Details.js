@@ -5,7 +5,7 @@ export const Details = () => {
         <div className="details-box">
             <div className="details-card">
                 <div className="details-card__body">
-                    <span className="tag tag-blue">Entertainment</span>
+                    <span className="details-tag tag-blue">Entertainment</span>
                     <h4>Netflix to Stream Johnny Depp’s Return to Film in France</h4>
                     <p>Netflix Inc. has acquired the rights to stream Johnny Depp’s next film in France, a deal that will
                         help fund the actor’s first feature...</p>

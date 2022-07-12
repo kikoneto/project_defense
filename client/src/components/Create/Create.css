@@ -1,6 +1,6 @@
 .create-form-box {
     width: 400px;
-    height: 520px;
+    height: 620px;
     margin: auto;
     background-color: lightcoral;
     border-radius: 3px;
@@ -43,7 +43,7 @@
 
 .create-form input[type="submit"] {
     width: 350px;
-    height: 35px;
+    height: 40px;
     margin-top: 25px;
     margin-bottom: 25px;
     border: none;

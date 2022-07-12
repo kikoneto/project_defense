@@ -1,6 +1,6 @@
 .inside-nav-box {
     width: 200px;
-    height: 570px;
+    height: 620px;
     border: 2px solid black;
     background-color: lightcoral;
     border-radius: 5px;
@@ -16,7 +16,7 @@
 .inside-nav-box button {
     cursor: crosshair;
     width: 150px;
-    height: 25px;
+    height: 30px;
     margin-top: 25px;
     margin-bottom: 25px;
     margin-left: 25px;
