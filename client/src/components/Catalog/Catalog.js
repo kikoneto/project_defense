@@ -3,9 +3,10 @@ import { NewsCard } from "./NewsCard/NewsCard";
 
 import { InsideNav } from "./InsideNav/InsideNav";
 import { getAll } from "../services/newsServices";
-import { useEffect, useState } from "react";
 
-export const Catalog = () => {
+import { useEffect, useRef, useState } from "react";
+
+export const Catalog = (sort) => {
 
     const [news, setNews] = useState([]);
 
@@ -15,6 +16,7 @@ export const Catalog = () => {
                 setNews(Object.values(result))
             );
     }, [])
+
     return (
         <div className="container">
 

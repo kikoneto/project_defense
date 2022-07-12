@@ -1,6 +1,6 @@
 .edit-form-box {
     width: 400px;
-    height: 520px;
+    height: 670px;
     margin: auto;
     background-color: lightcoral;
     border-radius: 3px;
@@ -15,6 +15,10 @@
 .edit-form {
     width: 350px;
     margin-left: 20px;
+}
+
+.edit-form span {
+    color: red;
 }
 
 .edit-form label {
@@ -43,7 +47,7 @@
 
 .edit-form input[type="submit"] {
     width: 350px;
-    height: 35px;
+    height: 40px;
     margin-top: 25px;
     margin-bottom: 25px;
     border: none;

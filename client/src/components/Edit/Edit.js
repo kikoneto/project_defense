@@ -6,15 +6,17 @@ export const Edit = () => {
             <div className="edit-form-box">
                 <h1>Edit News</h1>
                 <form className="edit-form">
-                    <label for="title">Title</label>
+                    <label htmlFor="title">Title</label>
                     <input type="text" />
-                    <label for="full_article">Full Article</label>
-                    <input type="text" placeholder="At least 100 words" />
-                    <label for="short_article">Short Version of the Article</label>
-                    <input type="text" placeholder="At least 25 words" />
-                    <label for="image_url">Image URL</label>
+                    <label htmlFor="full_article">Full Article</label>
+                    <input type="text" />
+                    <span>Word limit 100</span>
+                    <label htmlFor="short_article">Short Version of the Article</label>
+                    <input type="text" />
+                    <span>Word limit 25</span>
+                    <label htmlFor="image_url">Image URL</label>
                     <input type="text" placeholder="exmp: https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRETW7ZQwdE8/v1/800x-1.jpg" />
-                    <label for="topic">Topic</label>
+                    <label htmlFor="topic">Topic</label>
                     <select id="topic" name="topic">
                         <option value="technology">Technology</option>
                         <option value="sport">Sport</option>

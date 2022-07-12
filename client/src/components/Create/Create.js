@@ -9,9 +9,9 @@ export const Create = () => {
                     <label for="title">Title</label>
                     <input type="text" />
                     <label for="full_article">Full Article</label>
-                    <input type="text" placeholder="At least 100 words" />
+                    <input type="text" placeholder="Word limit 110" />
                     <label for="short_article">Short Version of the Article</label>
-                    <input type="text" placeholder="At least 25 words that are part of the Article" />
+                    <input type="text" placeholder="Word limit 25" />
                     <label for="image_url">Image URL</label>
                     <input type="text" placeholder="exmp: https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRETW7ZQwdE8/v1/800x-1.jpg" />
                     <label for="topic">Topic</label>

@@ -7,7 +7,7 @@ import { Header } from "./components/Header/Header";
 import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 function App() {
     return (
@@ -15,13 +15,12 @@ function App() {
             <Header />
 
             <Routes>
-                <Route path="/" element={<Catalog />} />
-                <Route path="/catalog" element={<Catalog />} />
+                <Route path="/details/:id/*" element={<Details />} />
+                <Route path="/edit/:id/*" element={<Edit />} />
+                <Route path="/catalog/*" element={<Catalog />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/create" element={<Create />} />
-                <Route path="/edit" element={<Edit />} />
-                <Route path="/details" element={<Details />} />
             </Routes>
 
         </div>

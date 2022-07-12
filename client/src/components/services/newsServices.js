@@ -4,3 +4,8 @@ export const getAll = () => {
     return fetch(baseUrl)
         .then(res => res.json());
 }
+
+export const getById = (id) => {
+    return fetch(`${baseUrl}/${id}`)
+        .then(res => res.json());
+}
