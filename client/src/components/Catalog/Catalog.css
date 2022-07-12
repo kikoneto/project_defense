@@ -38,6 +38,7 @@
 }
 
 .card__body img {
+    object-fit: cover;
     max-width: 100%;
     display: block;
     object-fit: cover;
@@ -96,15 +97,21 @@
 }
 
 .user__image {
+    margin-top: -26px;
     border-radius: 50%;
+    height: 170%;
 }
 
-.user__info>small {
+.user__info h5 {
+    margin-bottom: -30px;
+    margin-top: -30px;
+    font-size: 20px;
     color: #666;
 }
 
-.action-buttons button {
-    margin: 4px;
-    padding: 6px;
+.action-buttons {
+    margin-top: -20px;
+    margin-left: 20%;
+    padding: 5px;
     cursor: crosshair;
 }

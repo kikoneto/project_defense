@@ -1,95 +1,26 @@
 import "./Catalog.css";
+import { NewsCard } from "./NewsCard/NewsCard";
+
 import { InsideNav } from "./InsideNav/InsideNav";
+import { getAll } from "../services/newsServices";
+import { useEffect, useState } from "react";
 
 export const Catalog = () => {
+
+    const [news, setNews] = useState([]);
+
+    useEffect(() => {
+        getAll()
+            .then(result =>
+                setNews(Object.values(result))
+            );
+    }, [])
     return (
         <div className="container">
 
             <InsideNav />
-            
-            <div className="card">
-                <div className="card__header">
-                    <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" className="card__image " width="600" />
-                </div>
-                <div className="card__body">
-                    <span className="tag tag-blue">Technology</span>
-                    <h4>What's new in 2022 Tech</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                        doloribus.
-                        Doloremque, nihil! At ea atque quidem!</p>
-                </div>
-                <div className="card__footer">
-                    <div className="user">
-                        <img src="https://i.pravatar.cc/40?img=1" alt="user__image" className="user__image" />
-                        <div className="user__info">
-                            <h5>Jane Doe</h5>
-                            <small>2h ago</small>
-                        </div>
-                    </div>
 
-                    <div className="action-buttons">
-                        <button className="tag tag-brown">Details</button>
-                        <button className="tag tag-pink">Edit</button>
-                        <button className="tag tag-red">Delete</button>
-                    </div>
-                </div>
-            </div>
-
-            <div className="card">
-                <div className="card__header">
-                    <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" className="card__image " width="600" />
-                </div>
-                <div className="card__body">
-                    <span className="tag tag-blue">Technology</span>
-                    <h4>What's new in 2022 Tech</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                        doloribus.
-                        Doloremque, nihil! At ea atque quidem!</p>
-                </div>
-                <div className="card__footer">
-                    <div className="user">
-                        <img src="https://i.pravatar.cc/40?img=1" alt="user__image" className="user__image" />
-                        <div className="user__info">
-                            <h5>Jane Doe</h5>
-                            <small>2h ago</small>
-                        </div>
-                    </div>
-
-                    <div className="action-buttons">
-                        <button className="tag tag-brown">Details</button>
-                        <button className="tag tag-pink">Edit</button>
-                        <button className="tag tag-red">Delete</button>
-                    </div>
-                </div>
-            </div>
-
-            <div className="card">
-                <div className="card__header">
-                    <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" className="card__image " width="600" />
-                </div>
-                <div className="card__body">
-                    <span className="tag tag-blue">Technology</span>
-                    <h4>What's new in 2022 Tech</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
-                        doloribus.
-                        Doloremque, nihil! At ea atque quidem!</p>
-                </div>
-                <div className="card__footer">
-                    <div className="user">
-                        <img src="https://i.pravatar.cc/40?img=1" alt="user__image" className="user__image" />
-                        <div className="user__info">
-                            <h5>Jane Doe</h5>
-                            <small>2h ago</small>
-                        </div>
-                    </div>
-
-                    <div className="action-buttons">
-                        <button className="tag tag-brown">Details</button>
-                        <button className="tag tag-pink">Edit</button>
-                        <button className="tag tag-red">Delete</button>
-                    </div>
-                </div>
-            </div>
+            {news.map(x => <NewsCard key={x._id} news={x} />)}
             <p className="pagination">Todo: Pagination</p>
         </div>
     );
