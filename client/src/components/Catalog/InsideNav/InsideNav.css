@@ -1,0 +1,32 @@
+.inside-nav-box {
+    width: 200px;
+    height: 570px;
+    border: 2px solid black;
+    background-color: lightcoral;
+    border-radius: 5px;
+    color: white;
+}
+
+.inside-nav-box h2 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+.inside-nav-box button {
+    cursor: crosshair;
+    width: 150px;
+    height: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: linear-gradient(to right, #f2f5f5, #848484, #565656);
+    color: black;
+    font-size: 18px;
+}
+
+.news-list li {
+    list-style: none;
+}
