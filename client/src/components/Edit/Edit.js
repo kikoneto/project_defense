@@ -63,7 +63,7 @@ export const Edit = () => {
                     <label htmlFor="image_url">Image URL</label>
                     <input type="text" name="imageUrl" defaultValue={news.imageUrl} />
                     <label htmlFor="topic">Topic</label>
-                    <select id="topic" name="topic" >
+                    <select id="topic" name="topic" defaultValue={newsTopic}>
                         <option value="Technology">Technology</option>
                         <option value="Sport">Sport</option>
                         <option value="Entertainment">Entertainment</option>
