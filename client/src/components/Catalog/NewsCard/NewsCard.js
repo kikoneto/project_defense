@@ -8,8 +8,8 @@ export const NewsCard = ({
 
             <section>
                 <Routes>
-                    <Route path={`/details/${news._id}`} element={<Navigate replace to={`/details/${news._id}`} />} />
-                    <Route path={`/edit/${news._id}`} element={<Navigate replace to={`/edit/${news._id}`} />} />
+                    <Route path={`/${news._id}`} element={<Navigate replace to={`/details/${news._id}`} />} />
+                    <Route path={`/${news._id}`} element={<Navigate replace to={`/edit/${news._id}`} />} />
                 </Routes>
             </section>
 
@@ -32,8 +32,8 @@ export const NewsCard = ({
             </div>
             <div className="action-buttons">
 
-                <Link to={`details/${news._id}`}><button className="tag tag-brown">Details</button></Link>
-                <Link to={`edit/${news._id}`}><button className="tag tag-pink">Edit</button></Link>
+                <Link to={`/details/${news._id}`}><button className="tag tag-brown">Details</button></Link>
+                <Link to={`/edit/${news._id}`}><button className="tag tag-pink">Edit</button></Link>
                 <button className="tag tag-red">Delete</button>
 
             </div>

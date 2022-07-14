@@ -1,7 +1,7 @@
 import "./Details.css";
 
 import { Link, Route, Routes, Navigate } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { getById } from "../services/newsServices";

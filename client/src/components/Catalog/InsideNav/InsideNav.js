@@ -1,47 +1,66 @@
-import "./InsideNav.css"
+import "./InsideNav.css";
+import "../Catalog.css";
+import { FilteredCatalog } from "../FilteredCatalog/FilteredCatalog";
+
+import { Route, Routes, Link } from "react-router-dom";
 
 export const InsideNav = () => {
+
     return (
         <div className="inside-nav-box">
+
+            <section>
+                <Routes>
+                    <Route path="/technology" element={<FilteredCatalog />}></Route>
+                    <Route path="/sports" element={<FilteredCatalog />}></Route>
+                    <Route path="/entertainment" element={<FilteredCatalog />}></Route>
+                    <Route path="/science" element={<FilteredCatalog />}></Route>
+                    <Route path="/health" element={<FilteredCatalog />}></Route>
+                    <Route path="/business" element={<FilteredCatalog />}></Route>
+                    <Route path="/marketing" element={<FilteredCatalog />}></Route>
+                </Routes>
+            </section>
+
+
             <nav className="inside-news-nav">
                 <div className="inside-nav-header">
                     <h2>Sort News</h2>
                 </div>
                 <ul className="news-list">
                     <li>
-                        <a href="technology">
+                        <Link to="technology">
                             <button>Technology</button>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="sport">
+                        <Link to="sports">
                             <button>Sport</button>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="entertainment">
+                        <Link to="entertainment">
                             <button>Entertainment</button>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="science">
+                        <Link to="science">
                             <button>Science</button>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="health">
+                        <Link to="health">
                             <button>Health</button>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="business">
+                        <Link to="business">
                             <button>Business</button>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="marketing">
+                        <Link to="marketing">
                             <button>Marketing</button>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>
