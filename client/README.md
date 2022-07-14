@@ -6,6 +6,8 @@
 # 5. Make Logout work
 # 6. Make Create work
 # 7. Add Pagination
+# 8. Deploy Server to Heroku
+# 9. Deploy App to Firebase
 # Optional:
 # Use React Redux
 # Add Likes
