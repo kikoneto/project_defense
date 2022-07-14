@@ -53,15 +53,15 @@ export const Edit = () => {
                 <form className="edit-form" onSubmit={onSubmitHandler}>
                     {/* ToDo Validation */}
                     <label htmlFor="title">Title</label>
-                    <input type="text" name="title" />
+                    <input type="text" name="title" defaultValue={news.title} />
                     <label htmlFor="full_article">Full Article</label>
-                    <input type="text" name="fullArticle" />
+                    <input type="text" name="fullArticle" defaultValue={news.full_article} />
                     <span>Word limit 100</span>
                     <label htmlFor="short_article">Short Version of the Article</label>
-                    <input type="text" name="shortArticle" />
+                    <input type="text" name="shortArticle" defaultValue={news.short_article} />
                     <span>Word limit 25</span>
                     <label htmlFor="image_url">Image URL</label>
-                    <input type="text" name="imageUrl" />
+                    <input type="text" name="imageUrl" defaultValue={news.imageUrl} />
                     <label htmlFor="topic">Topic</label>
                     <select id="topic" name="topic" >
                         <option value="Technology">Technology</option>
