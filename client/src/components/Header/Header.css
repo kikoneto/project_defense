@@ -25,15 +25,26 @@ body {
     letter-spacing: 5px;
     font-size: 20px;
 }
+.logo p{
+    font-size: 10px;
+}
 
 .nav-links {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 50%;
+}
+
+.nav-links div {
+    margin-left: 10px;
 }
 
 .nav-links li {
     list-style: none;
+    margin-left: 30px;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 .nav-links a {

@@ -7,21 +7,21 @@ export const Register = () => {
                 <h1>Sign Up</h1>
 
                 <form className="form-register">
-                    <label for="username">Username</label>
+                    <label htmlFor="username">Username</label>
                     <input type="text" />
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" />
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" />
-                    <label for="password">Confirm Password</label>
+                    <label htmlFor="password">Confirm Password</label>
                     <input type="password" />
-                    <label for="gender">Gender</label>
+                    <label htmlFor="gender">Gender</label>
                     <select id="gender" name="gender">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
                     </select>
-                    <label for="avatar"> Avatar URL</label>
+                    <label htmlFor="avatar"> Avatar URL</label>
                     <input type="text" placeholder="Optional... Default one is created automatically" />
                     <input type="submit" />
                 </form>
