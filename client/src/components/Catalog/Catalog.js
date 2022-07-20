@@ -1,20 +1,33 @@
 import "./Catalog.css";
 import { NewsCard } from "./NewsCard/NewsCard";
-
 import { InsideNav } from "./InsideNav/InsideNav";
+
 import { getAll } from "../../services/newsServices";
 
-import { useEffect, useState } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
+import { useEffect, useState, useContext } from "react";
 
 export const Catalog = () => {
+    const { user } = useContext(AuthContext);
 
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-        getAll()
-            .then(result =>
-                setNews(Object.values(result))
-            );
+        if (user._id) {
+            getAll()
+                .then(result => {
+                    const filteredNews = Object.values(result).filter(x => x._createdOn);
+                    const normalNews = Object.values(result);
+                    const allNews = { ...normalNews, ...filteredNews };
+                    setNews(Object.values(allNews))
+                });
+        } else {
+            getAll()
+                .then(result => {
+                    setNews(Object.values(result));
+                });
+        }
+
     }, []);
 
     return (
