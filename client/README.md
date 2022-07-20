@@ -5,6 +5,5 @@
 # Optional:
 # Use React Redux
 # Add Likes
-# Add Dislikes
-# Add Comments
 # Add Pagination
+# Add Persistation
