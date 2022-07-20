@@ -8,12 +8,17 @@
 
 .container {
     display: flex;
-    height: 65vh;
+    height: 10vh;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1450px;
     margin-block: 2rem;
     gap: 2rem;
+}
+
+.container-div{
+    text-align: center;
+    display: flex;
 }
 
 .card {

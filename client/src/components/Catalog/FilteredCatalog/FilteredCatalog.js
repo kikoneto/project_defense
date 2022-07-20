@@ -26,7 +26,6 @@ export const FilteredCatalog = () => {
                 </Routes>
             </section>
             {news.map(x => <NewsCard key={x._id} news={x} />)}
-            <p className="pagination">Todo: Pagination</p>
         </div>
     );
 }

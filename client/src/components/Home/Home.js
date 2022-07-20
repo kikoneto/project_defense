@@ -42,12 +42,10 @@ export const Home = () => {
             <h1 className="intro">Being in touch with everything that happens around the world might be pretty hard. Well not annymore.</h1>
             <h2 className="second-intro">Welcome to Shade News </h2>
 
-            <div className="home-main">
-                {user._id
-                    ? userInterface
-                    : guestInterface
-                }
-            </div>
+            {user._id
+                ? userInterface
+                : guestInterface
+            }
         </div>
     );
 }

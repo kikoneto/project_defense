@@ -1,7 +1,7 @@
 .inside-nav-box {
     opacity: 70%;
-    width: 200px;
-    height: 620px;
+    width: 1250px;
+    height:  120px;
     border: 2px solid black;
     background-color: lightcoral;
     border-radius: 5px;
@@ -18,7 +18,7 @@
     cursor: crosshair;
     width: 150px;
     height: 30px;
-    margin-top: 25px;
+    margin-top: 5px;
     margin-bottom: 25px;
     margin-left: 25px;
     border: 2px solid white;
@@ -28,6 +28,9 @@
     font-size: 18px;
 }
 
+.news-list{
+    display: flex;
+}
 .news-list li {
     list-style: none;
 }

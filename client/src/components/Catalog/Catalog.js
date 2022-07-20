@@ -23,10 +23,11 @@ export const Catalog = () => {
     return (
         <div className="container">
 
-            <InsideNav />
+            <div className="container-div">
+                <InsideNav />
+            </div>
 
             {news.map(x => <NewsCard key={x._id} news={x} />)}
-            <p className="pagination">Todo: Pagination</p>
         </div>
     );
 }
