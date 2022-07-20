@@ -37,7 +37,7 @@ export const Header = () => {
         <nav className="main-nav">
             <div className="logo">
                 <h4>Shade News</h4>
-                {user.email && <p>Welcome {user.email}</p>}
+                {user.email && <p>Welcome, {user.username}</p>}
             </div>
 
             <ul className="nav-links">

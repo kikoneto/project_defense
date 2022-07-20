@@ -1,0 +1,30 @@
+.intro {
+    text-align: center;
+    font-size: 250%;
+}
+
+.second-intro {
+    background-color: lightcoral;
+    padding: 10px;
+    text-align: center;
+}
+
+.home-main {
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    padding: 70px;
+    font-size: 30px;
+}
+.home-main div{
+    text-align: center;
+    margin: 30px;
+}
+.home-main div button {
+    cursor: crosshair;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: lightcoral;
+    color: rgb(215, 215, 215);
+}
