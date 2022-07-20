@@ -2,9 +2,12 @@ import "./Edit.css";
 import { editById, getById } from "../../services/newsServices";
 
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export const Edit = () => {
+
+    const { user } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -31,16 +34,16 @@ export const Edit = () => {
         const post = {
             imageUrl,
             topic,
-            "avatarUrl": news.avatarUrl,
-            "gender": news.gender,
-            "email": news.email,
+            "avatarUrl": user.avatarUrl,
+            "gender": user.gender,
+            "email": user.email,
             "full_article": fullArticle,
             "short_article": shortArticle,
             title,
             "_id": id
         }
 
-        editById(id, post)
+        editById(id, post, user.accessToken)
             .then(res => {
                 navigate(-1, { replace: true })
             })
