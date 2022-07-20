@@ -1,5 +1,5 @@
 import "./Create.css"
-import { create } from "../services/newsServices";
+import { create } from "../../services/newsServices";
 
 export const Create = () => {
 

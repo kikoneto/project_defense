@@ -3,7 +3,7 @@ import { useParams, Route, Routes, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { NewsCard } from "../NewsCard/NewsCard";
-import { getAll } from "../../services/newsServices";
+import { getAll } from "../../../services/newsServices";
 
 export const FilteredCatalog = () => {
     const [news, setNews] = useState([]);

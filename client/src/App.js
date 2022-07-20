@@ -6,25 +6,34 @@ import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
+import { FilteredCatalog } from "./components/Catalog/FilteredCatalog/FilteredCatalog";
 
-import { useState } from "react";
 import { AuthContext } from "./contexts/AuthContext";
 
-import { Route, Routes, Navigate } from "react-router-dom";
-import { FilteredCatalog } from "./components/Catalog/FilteredCatalog/FilteredCatalog";
+import { useState } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
+
 
 function App() {
 
     const initialState = {
         _id: '',
         email: '',
+        gender: '',
+        username: '',
+        password: '',
+        avatarUrl: '',
         accessToken: '',
     };
 
     const [user, setUser] = useState({ ...initialState });
 
+    const navigate = useNavigate();
+
     const login = (authData) => {
         setUser(authData);
+
+        navigate('/catalog', { replace: true });
     }
 
     const logout = () => {
@@ -39,7 +48,6 @@ function App() {
                 <Header />
 
                 <Routes>
-                    <Route path="/" element={<Navigate to="/catalog" />} />
                     <Route path="/details/:id/*" element={<Details />} />
                     <Route path="/edit/:id/*" element={<Edit />} />
                     <Route path="/catalog" element={<Catalog />} />

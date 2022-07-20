@@ -4,7 +4,7 @@ import { Link, Route, Routes, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { getById } from "../services/newsServices";
+import { getById } from "../../services/newsServices";
 
 export const Details = () => {
 

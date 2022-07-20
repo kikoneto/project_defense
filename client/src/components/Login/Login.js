@@ -1,12 +1,13 @@
 import "./Login.css";
-import * as authService from "../services/authService";
 
-import { useContext } from "react";
+import * as authService from "../../services/authService";
+
 import { AuthContext } from "../../contexts/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+
+import { Link } from "react-router-dom";
 
 export const Login = () => {
-    const navigate = useNavigate();
     const { login } = useContext(AuthContext);
 
     const onSubmitHandler = (e) => {
@@ -20,9 +21,6 @@ export const Login = () => {
         authService.login(email, password)
             .then(res => {
                 login(res);
-
-                navigate('/catalog', { replace: true });
-
             })
             .catch(err => {
                 alert(err);
@@ -42,7 +40,7 @@ export const Login = () => {
                     <input type="submit" />
                 </form>
             </div>
-            <p className="sign-up-paragraph">You don't have an account? <a href="/register">Sign Up</a></p>
+            <p className="sign-up-paragraph">You don't have an account? <Link to="/register">Sign Up</Link></p>
         </div>
     );
 }

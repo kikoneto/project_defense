@@ -2,7 +2,7 @@ import "./Catalog.css";
 import { NewsCard } from "./NewsCard/NewsCard";
 
 import { InsideNav } from "./InsideNav/InsideNav";
-import { getAll } from "../services/newsServices";
+import { getAll } from "../../services/newsServices";
 
 import { useEffect, useState } from "react";
 

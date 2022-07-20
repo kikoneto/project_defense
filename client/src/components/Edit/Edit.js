@@ -1,5 +1,5 @@
 import "./Edit.css";
-import { editById, getById } from "../services/newsServices";
+import { editById, getById } from "../../services/newsServices";
 
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
