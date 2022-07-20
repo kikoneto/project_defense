@@ -10,13 +10,13 @@ export const Create = () => {
                 <h1>Create News</h1>
                 <form className="create-form">
                     <label htmlFor="title">Title</label>
-                    <input type="text" />
+                    <input type="text" name="title" />
                     <label htmlFor="full_article">Full Article</label>
-                    <input type="text" placeholder="Word limit 110" />
+                    <input type="text" name="full_article" placeholder="Word limit 110" />
                     <label htmlFor="short_article">Short Version of the Article</label>
-                    <input type="text" placeholder="Word limit 25" />
+                    <input type="text" name="short_article" placeholder="Word limit 25" />
                     <label htmlFor="image_url">Image URL</label>
-                    <input type="text" placeholder="exmp: https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRETW7ZQwdE8/v1/800x-1.jpg" />
+                    <input type="text" name="image_url" placeholder="exmp: https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRETW7ZQwdE8/v1/800x-1.jpg" />
                     <label htmlFor="topic">Topic</label>
                     <select id="topic" name="topic">
                         <option value="technology">Technology</option>

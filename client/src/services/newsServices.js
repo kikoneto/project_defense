@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3030/jsonstore/news";
+const baseUrl = "http://localhost:3030/data/news";
 
 export const getAll = () => {
     return fetch(baseUrl)
@@ -10,11 +10,12 @@ export const getById = (id) => {
         .then(res => res.json());
 }
 
-export const editById = (id, post) => {
+export const editById = (id, post, accessToken) => {
     return fetch(`${baseUrl}/${id}`, {
         method: "PUT",
         headers: {
-            "content-type": "application/json"
+            "content-type": "application/json",
+            "X-Authorization": accessToken,
         },
         body: JSON.stringify(post)
     })
@@ -22,6 +23,5 @@ export const editById = (id, post) => {
 }
 
 export const create = (post) => {
-    return fetch(`${baseUrl}/${post._id}`)
-        .then(res => res.json());
+    return fetch(`${baseUrl}`)
 }

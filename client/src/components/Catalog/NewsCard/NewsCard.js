@@ -1,8 +1,21 @@
 import { Link, Route, Routes, Navigate } from "react-router-dom";
 
+import { AuthContext } from "../../../contexts/AuthContext";
+import { useContext } from "react";
+
 export const NewsCard = ({
     news
 }) => {
+
+    const { user } = useContext(AuthContext);
+
+    let userButtons = (
+        <div>
+            <Link to={`/edit/${news._id}`}><button className="tag tag-pink">Edit</button></Link>
+            <button className="tag tag-red">Delete</button>
+        </div>
+    );
+
     return (
         <div className="card">
 
@@ -33,8 +46,7 @@ export const NewsCard = ({
             <div className="action-buttons">
 
                 <Link to={`/details/${news._id}`}><button className="tag tag-brown">Details</button></Link>
-                <Link to={`/edit/${news._id}`}><button className="tag tag-pink">Edit</button></Link>
-                <button className="tag tag-red">Delete</button>
+                {user._id && user._id === news._ownerId}
 
             </div>
         </div>
