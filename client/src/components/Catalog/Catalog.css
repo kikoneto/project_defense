@@ -114,10 +114,13 @@
     margin-top: -20px;
     margin-left: 30%;
     padding: 5px;
-    cursor: crosshair;
 }
 
 .action-buttons div {
     display: inline;
     margin-left: 20px;
+}
+
+.action-buttons button {
+    cursor: crosshair;
 }

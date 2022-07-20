@@ -36,7 +36,7 @@ export const Header = () => {
     return (
         <nav className="main-nav">
             <div className="logo">
-                <h4>Shade News</h4>
+                <Link to='/' className="title" >Shade News</Link>
                 {user.email && <p>Welcome, {user.username}</p>}
             </div>
 

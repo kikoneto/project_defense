@@ -9,18 +9,18 @@
     text-align: center;
 }
 
-.home-main {
-    margin: 20px;
-    align-items: center;
+.home-container {
+    margin: 40px;
+    margin-left: 250px;
     display: flex;
     padding: 70px;
     font-size: 30px;
 }
-.home-main div{
+.home-container div{
     text-align: center;
     margin: 30px;
 }
-.home-main div button {
+.home-container div button {
     cursor: crosshair;
     padding: 10px;
     font-size: 30px;

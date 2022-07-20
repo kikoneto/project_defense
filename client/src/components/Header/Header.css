@@ -25,7 +25,8 @@ body {
     letter-spacing: 5px;
     font-size: 20px;
 }
-.logo p{
+
+.logo p {
     font-size: 10px;
 }
 
@@ -47,12 +48,18 @@ body {
     display: inline-block;
 }
 
-.nav-links a {
+.main-nav a {
     color: rgb(224, 224, 224);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 18px;
+    cursor: crosshair;
+}
+
+.title {
+    font-size: 27px;
+    color: rgb(224, 224, 224);
     cursor: crosshair;
 }
 
