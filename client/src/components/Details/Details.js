@@ -1,13 +1,13 @@
 import "./Details.css";
 
 import { useEffect, useState, useContext } from "react";
-import { Link, Route, Routes, Navigate, useParams } from "react-router-dom";
+import { Link, Route, Routes, Navigate, useParams, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext"
 
-import { getById } from "../../services/newsServices";
+import { getById, destroy } from "../../services/newsServices";
 
 export const Details = () => {
-
+    const navigate = useNavigate();
     const { user } = useContext(AuthContext);
 
     const [news, setNews] = useState([]);
@@ -21,15 +21,23 @@ export const Details = () => {
             })
     }, []);
 
+    const deleteHandler = () => {
+        destroy(id, user.accessToken)
+            .then(res => {
+                navigate(-1, { replace: true });
+            })
+    };
+
     let ownerButtons = (
         <div>
             <Link to={`edit/${news._id}`} >
                 <button className="tag tag-pink">Edit</button>
             </Link>
 
-            <button className="tag tag-red">Delete</button>
+            <button className="tag tag-red" onClick={deleteHandler}>Delete</button>
         </div>
     );
+
 
     return (
         <div className="details-box">

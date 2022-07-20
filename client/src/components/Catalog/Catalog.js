@@ -13,20 +13,10 @@ export const Catalog = () => {
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-        if (user._id) {
-            getAll()
-                .then(result => {
-                    const filteredNews = Object.values(result).filter(x => x._createdOn);
-                    const normalNews = Object.values(result);
-                    const allNews = { ...normalNews, ...filteredNews };
-                    setNews(Object.values(allNews))
-                });
-        } else {
-            getAll()
-                .then(result => {
-                    setNews(Object.values(result));
-                });
-        }
+        getAll()
+            .then(result => {
+                setNews(Object.values(result));
+            });
 
     }, []);
 

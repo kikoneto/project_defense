@@ -5,11 +5,6 @@ export const getAll = () => {
         .then(res => res.json());
 }
 
-export const getMyNews = (ownerId) => {
-    return fetch(`${baseUrl}?sortBy=_ownerId`)
-    .then(res => res.json())
-}
-
 export const getById = (id) => {
     return fetch(`${baseUrl}/${id}`)
         .then(res => res.json());
@@ -35,6 +30,17 @@ export const create = (post, accessToken) => {
             "X-Authorization": accessToken,
         },
         body: JSON.stringify(post)
+    })
+        .then(res => res.json());
+}
+
+export const destroy = (id, accessToken) => {
+    return fetch(`${baseUrl}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "content-type": "application/json",
+            "X-Authorization": accessToken,
+        },
     })
         .then(res => res.json());
 }

@@ -49,16 +49,16 @@ function App() {
                 <Header />
 
                 <Routes>
+                    <Route path="/catalog/details/*" element={<Catalog />} />
+                    <Route path="/catalog/:filter/*" element={<FilteredCatalog />} />
+                    <Route path="/filtered/:filter" element={<Create />} />
                     <Route path="/details/:id/*" element={<Details />} />
                     <Route path="/edit/:id/*" element={<Edit />} />
-                    <Route path="/catalog" element={<Catalog />} />
-                    <Route path="/catalog/:filter/*" element={<FilteredCatalog />} />
-                    <Route path="/catalog/details/*" element={<Catalog />} />
+                    <Route path="/catalog/*" element={<Catalog />} />
+                    <Route path="/mynews/*" element={<MyNews />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/create" element={<Create />} />
-                    <Route path="/filtered/:filter" element={<Create />} />
-                    <Route path="/mynews" element={<MyNews />} />
                 </Routes>
 
             </div>

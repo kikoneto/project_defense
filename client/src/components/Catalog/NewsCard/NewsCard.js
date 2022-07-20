@@ -1,4 +1,4 @@
-import { Link, Route, Routes, Navigate } from "react-router-dom";
+import { Link, Route, Routes, Navigate, useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../../contexts/AuthContext";
 import { useContext } from "react";
@@ -6,13 +6,13 @@ import { useContext } from "react";
 export const NewsCard = ({
     news
 }) => {
+    const navigate = useNavigate();
 
     const { user } = useContext(AuthContext);
 
     let userButtons = (
         <div>
             <Link to={`/edit/${news._id}`}><button className="tag tag-pink">Edit</button></Link>
-            <button className="tag tag-red">Delete</button>
         </div>
     );
 

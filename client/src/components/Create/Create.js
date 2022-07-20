@@ -36,8 +36,7 @@ export const Create = () => {
 
         newsServices.create(post, user.accessToken)
             .then(res => {
-                console.log(res)
-                navigate(-1, { replace: true })
+                navigate(`/details/${res._id}`, { replace: true })
             });
 
     }

@@ -14,11 +14,10 @@ export const MyNews = () => {
 
     const [news, setNews] = useState([]);
 
-    const params = useParams();
     useEffect(() => {
         getAll()
             .then(result => {
-                const filteredNews = Object.values(result).filter(x => x._ownerId == user._id);
+                const filteredNews = Object.values(result).filter(x => x._ownerId === user._id);
                 setNews(filteredNews)
             });
     }, []);
