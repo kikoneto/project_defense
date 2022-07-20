@@ -1,8 +1,13 @@
 const baseUrl = "http://localhost:3030/data/news";
 
 export const getAll = () => {
-    return fetch(baseUrl)
+    return fetch(`${baseUrl}`)
         .then(res => res.json());
+}
+
+export const getMyNews = (ownerId) => {
+    return fetch(`${baseUrl}?sortBy=_ownerId`)
+    .then(res => res.json())
 }
 
 export const getById = (id) => {

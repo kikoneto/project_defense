@@ -11,7 +11,7 @@ export const Header = () => {
     let userNavigation = (
         <div className="nav-links-container">
             <li>
-                <Link to="/logout">My News</Link>
+                <Link to="/mynews">My News</Link>
             </li>
             <li>
                 <Link to="/create">Upload News</Link>

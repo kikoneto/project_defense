@@ -34,9 +34,9 @@ export const Edit = () => {
         const post = {
             imageUrl,
             topic,
-            "avatarUrl": user.avatarUrl,
-            "gender": user.gender,
-            "email": user.email,
+            "avatarUrl": news.avatarUrl,
+            "gender": news.gender,
+            "email": news.email,
             "full_article": fullArticle,
             "short_article": shortArticle,
             title,
