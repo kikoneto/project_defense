@@ -1,12 +1,14 @@
 import "./Details.css";
 
-import { Link, Route, Routes, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState, useContext } from "react";
+import { Link, Route, Routes, Navigate, useParams } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext"
 
 import { getById } from "../../services/newsServices";
 
 export const Details = () => {
+
+    const { user } = useContext(AuthContext);
 
     const [news, setNews] = useState([]);
 
@@ -18,6 +20,16 @@ export const Details = () => {
                 setNews(result)
             })
     }, []);
+
+    let ownerButtons = (
+        <div>
+            <Link to={`edit/${news._id}`} >
+                <button className="tag tag-pink">Edit</button>
+            </Link>
+
+            <button className="tag tag-red">Delete</button>
+        </div>
+    );
 
     return (
         <div className="details-box">
@@ -57,12 +69,9 @@ export const Details = () => {
                     </div>
 
                     <div className="details-action-buttons">
-
-                        <Link to={`edit/${news._id}`} >
-                            <button className="tag tag-pink">Edit</button>
-                        </Link>
-
-                        <button className="tag tag-red">Delete</button>
+                        {user._id && (user._id == news._ownerId &&
+                            ownerButtons
+                        )}
                     </div>
                 </div>
             </div>

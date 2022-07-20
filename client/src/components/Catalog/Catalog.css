@@ -110,8 +110,13 @@
 }
 
 .action-buttons {
+    align-items: center;
     margin-top: -20px;
     margin-left: 20%;
     padding: 5px;
     cursor: crosshair;
+}
+
+.action-buttons div {
+   display: inline;
 }

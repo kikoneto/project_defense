@@ -46,7 +46,9 @@ export const NewsCard = ({
             <div className="action-buttons">
 
                 <Link to={`/details/${news._id}`}><button className="tag tag-brown">Details</button></Link>
-                {user._id && user._id === news._ownerId}
+                {user._id && (user._id === news._ownerId &&
+                    userButtons
+                )}
 
             </div>
         </div>

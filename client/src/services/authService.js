@@ -24,7 +24,7 @@ export const register = async (email, username, password, gender, avatarUrl) => 
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify({ email, username, password, gender, avatarUrl: 'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRETW7ZQwdE8/v1/800x-1.jpg' })
+        body: JSON.stringify({ email, username, password, gender, avatarUrl: 'https://robohash.org/sapientenihilquaerat.png?size=50x50&set=set1' })
     });
 
     return await res.json();

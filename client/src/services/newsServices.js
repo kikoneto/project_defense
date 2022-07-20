@@ -22,6 +22,14 @@ export const editById = (id, post, accessToken) => {
         .then(res => res.json());
 }
 
-export const create = (post) => {
-    return fetch(`${baseUrl}`)
+export const create = (post, accessToken) => {
+    return fetch(`${baseUrl}`, {
+        method: "POST",
+        headers: {
+            "content-type": "application/json",
+            "X-Authorization": accessToken,
+        },
+        body: JSON.stringify(post)
+    })
+        .then(res => res.json());
 }
