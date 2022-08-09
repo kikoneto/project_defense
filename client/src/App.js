@@ -2,7 +2,6 @@ import { Catalog } from "./components/Catalog/Catalog";
 import { Create } from "./components/Create/Create";
 import { Details } from "./components/Details/Details";
 import { Edit } from "./components/Edit/Edit";
-import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
@@ -10,10 +9,9 @@ import { FilteredCatalog } from "./components/Catalog/FilteredCatalog/FilteredCa
 import { MyNews } from "./components/MyNews/MyNews";
 
 import { AuthContext } from "./contexts/AuthContext";
-
-import { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Home } from "./components/Home/Home";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 
 function App() {
@@ -28,7 +26,7 @@ function App() {
         accessToken: '',
     };
 
-    const [user, setUser] = useState({ ...initialState });
+    const [user, setUser] = useLocalStorage('auth', { ...initialState });
 
     const navigate = useNavigate();
 
@@ -63,8 +61,9 @@ function App() {
                     <Route path="/" element={<Home />} />
                 </Routes>
 
+
             </div>
-        </AuthContext.Provider>
+        </AuthContext.Provider >
     );
 }
 

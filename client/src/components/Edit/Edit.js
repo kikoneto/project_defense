@@ -1,6 +1,6 @@
 import "./Edit.css";
 import { editById, getById } from "../../services/newsServices";
-
+import { newsAreValid } from "../../validation";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -43,10 +43,12 @@ export const Edit = () => {
             "_id": id
         }
 
-        editById(id, post, user.accessToken)
-            .then(res => {
-                navigate(-1, { replace: true })
-            })
+        if (newsAreValid(title, shortArticle, fullArticle, imageUrl)) {
+            editById(id, post, user.accessToken)
+                .then(res => {
+                    navigate(-1, { replace: true })
+                })
+        }
     }
 
     return (

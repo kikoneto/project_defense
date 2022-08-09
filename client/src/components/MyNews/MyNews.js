@@ -2,7 +2,7 @@ import "../Catalog/Catalog.css";
 
 import { AuthContext } from "../../contexts/AuthContext";
 
-import { useParams, Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 
 import { NewsCard } from "../Catalog/NewsCard/NewsCard";
@@ -30,8 +30,13 @@ export const MyNews = () => {
                     <Route path={`/edit/${news._id}`} element={<Navigate replace to={`/edit/${news._id}`} />} />
                 </Routes>
             </section>
-            {news.map(x => <NewsCard key={x._id} news={x} />)}
-            <p className="pagination">Todo: Pagination</p>
+
+            {
+                news.length
+                    ? news.map(x => <NewsCard key={x._id} news={x} />)
+                    : <h1>No uploaded news</h1>
+            }
+
         </div>
     );
 }

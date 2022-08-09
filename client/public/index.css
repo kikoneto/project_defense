@@ -1,0 +1,11 @@
+.rights {
+    justify-content: center;
+    display: flex;
+}
+
+.rights a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #565656;
+    cursor: crosshair;
+}

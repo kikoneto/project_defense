@@ -46,6 +46,12 @@ export const Home = () => {
                 ? userInterface
                 : guestInterface
             }
+
+
+            <div className="rights">
+                <h4>© 2022 All Rights Reserved By</h4>
+                <a href="https://github.com/kikoneto"> Kristiyan Paunov</a>
+            </div>
         </div>
     );
 }

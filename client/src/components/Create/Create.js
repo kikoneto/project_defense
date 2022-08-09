@@ -1,6 +1,6 @@
 import "./Create.css"
 import * as newsServices from "../../services/newsServices";
-
+import { newsAreValid } from "../../validation";
 import { useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../contexts/AuthContext";
@@ -34,11 +34,12 @@ export const Create = () => {
             title,
         }
 
-        newsServices.create(post, user.accessToken)
-            .then(res => {
-                navigate(`/details/${res._id}`, { replace: true })
-            });
-
+        if (newsAreValid(title, shortArticle, fullArticle, imageUrl)) {
+            newsServices.create(post, user.accessToken)
+                .then(res => {
+                    navigate(`/details/${res._id}`, { replace: true })
+                });
+        }
     }
 
     return (

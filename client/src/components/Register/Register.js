@@ -1,6 +1,7 @@
 import "./Register.css"
 
 import * as authService from "../../services/authService"
+import { registerIsValid } from "../../validation";
 
 import { AuthContext } from "../../contexts/AuthContext";
 import { useContext } from "react";
@@ -23,10 +24,13 @@ export const Register = () => {
         let gender = form.get('gender');
         let avatarUrl = form.get('avatarUrl');
 
-        authService.register(email, username, password, gender, avatarUrl)
-            .then(res => {
-                login(res);
-            });
+        if (registerIsValid(username, email, password, confPass)) {
+
+            authService.register(email, username, password, gender, avatarUrl)
+                .then(res => {
+                    login(res);
+                });
+        }
     };
 
     return (
