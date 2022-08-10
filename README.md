@@ -8,4 +8,4 @@
 # 3. Done! Enjoy the project.
 
 # Server is deployed with heroku but you can start it yourself from the server folder.
-# After you start the server with $ node ./server.js open the clint folder after that the services folder and replace the baseURL with 'http://localhost:3030/'.
+# After you start the server with $ node ./server.js open the services folder inside the client folder to replace baseURL with 'http://localhost:3030/'.
