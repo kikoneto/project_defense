@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3030/data/news";
+const baseUrl = "https://softuni-final-exam-app-server.herokuapp.com/data/news";
 
 export const getAll = () => {
     return fetch(`${baseUrl}`)
