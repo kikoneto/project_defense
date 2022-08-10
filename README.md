@@ -3,6 +3,7 @@
 # To run Shade News you have to:
 
 # 1. Open client folder with VS Code
+# 2. Install the dependencies using $ npm install
 # 2. run $ npm start
 # 3. Done! Enjoy the project.
 
