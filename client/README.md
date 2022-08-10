@@ -1,9 +1,1 @@
-# Things Left To Do:
-# 1. Sort Catalog
-# 2. Deploy Server to Heroku
-# 3. Deploy App to Firebase
-# Optional:
-# Use React Redux
-# Add Likes
-# Add Pagination
-# Add Persistation
+# Shade News is a project, which allows you to browse news about specific topics. You can upload news yourself after you register. If you already have an account you can just login and upload your news. You can specificly search news by their topics with the inside menu. If you have created news yourself, you have the options to edit or even delete them.
