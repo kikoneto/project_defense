@@ -1,4 +1,5 @@
-# Shade News is a reactjs project.
+# Shade News is a reactjs project, most accurately my project defense for computer science degree in SoftUni. 
+# My Certificate from the course: https://softuni.bg/certificates/details/140731/270c1328.
 # Check the ReadME file in client folder
 # To run Shade News you have to:
 
